@@ -34,7 +34,7 @@ def part2(vals):
 if __name__ == '__main__':
     run_tests(part1, test_pairs_part1)
     print()
-    vals = tokenise_input_file('day_1_input.txt', func=int)
+    vals = tokenise_input_file('day1_input.txt', func=int)
     print(f'Part 1 answer: {part1(vals)}')
     print()
     run_tests(part2, test_pairs_part2)

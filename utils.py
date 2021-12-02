@@ -24,10 +24,11 @@ def tokenise_input_file(filepath, seperator='\n', func=None):
     return list(map(func, text.split(seperator)))
 
 def run_tests(func, io_pairs):
-    print(f'Running {len(io_pairs)} tests')
+    print(f'Running {len(io_pairs)} test(s)')
     for i, (func_input, correct_output) in enumerate(io_pairs):
-        if func(func_input) == correct_output:
+        result = func(func_input)
+        if result == correct_output:
             print(f'Test {i+1} passed')
         else:
-            print(f'Test {i+1} failed')
+            print(f'Test {i+1} failed, output was {result}')
     print('Tests done')
