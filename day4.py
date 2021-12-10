@@ -103,8 +103,6 @@ def part2(val):
         elif wins[0]:
             last_board_won = True
     board = boards[0]
-    print(board)
-    print(num)
     s = 0
     for i in range(5):
         for j in range(5):

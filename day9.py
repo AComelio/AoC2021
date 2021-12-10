@@ -95,4 +95,3 @@ if __name__ == '__main__':
     run_tests(part2, test_pairs_part2)
     print()
     print(f'Part 2 answer: {part2(grid.copy())}')
-
