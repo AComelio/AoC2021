@@ -6,6 +6,7 @@ Created on Thu Dec  3 09:25:46 2020
 """
 
 import time
+from itertools import product
 
 def time_me(func):
     def inner1(*args, **kwargs):
@@ -32,3 +33,10 @@ def run_tests(func, io_pairs):
         else:
             print(f'Test {i+1} failed, output was {result}')
     print('Tests done')
+
+def get_adjacent_coords(coord, include_self=False):
+    difs = (-1,0,1)
+    ranges = tuple(tuple(map(lambda x: x + v, difs)) for v in coord)
+    if include_self:
+        return tuple(product(*ranges))
+    return tuple(p for p in product(*ranges) if p != coord)
